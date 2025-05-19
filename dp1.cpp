@@ -171,5 +171,34 @@ int main(){
     // accumulate
     int sum = accumulate(v.begin(),v.end(),0);
     cout << sum << endl;
+    
+    vector<int> v ;
+    v.push_back(1);
+    v.push_back(3);
+    v.push_back(5);
+    v.push_back(7);
+    v.push_back(9);
+
+    auto it = lower_bound(v.begin(), v.end(), 4);
+    cout << *it << endl; // Output: 5
+
+    auto it1 = upper_bound(v.begin(), v.end(), 5);
+    cout <<  *it1 << endl; // Output: 7
+
+    sort(v.begin(), v.end());
+    for (int x : v) cout << x << " "; // Output: 1 2 3 4 5
+    
+    reverse(v.begin(), v.end());
+    for (int x : v) cout << x << " "; 
+
+    int a = 5, b = 10;
+    swap(a, b);
+    cout << "a: " << a << ", b: " << b << endl;
+
+    // int a = 5, b = 10;
+    // cout << "min: " << min(a, b) << ", max: " << max(a, b) << endl; 
+
+    int sum = accumulate(v.begin(), v.end(), 0);
+    cout << "sum: " << sum << endl; 
 
 }
